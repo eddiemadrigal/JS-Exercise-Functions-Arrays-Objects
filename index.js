@@ -66,7 +66,8 @@ console.log(result);
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(personInfo) {
-  const str = '';
+  const str = `Hello, my name is ${personInfo.name}`;
+  return str;
 }
 
 const person = {
@@ -74,6 +75,8 @@ const person = {
   name: 'Erika',
   email: 'erika@someemail.com'
 };
+
+console.log(getName(person));
 
 
 
