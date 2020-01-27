@@ -15,7 +15,7 @@
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
-console.log(addNumbers(3, 80));
+addNumbers(3, 80);
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -49,9 +49,6 @@ function makePersonObject(id, name, email) {
   return objResult;
 }
 
-const result = makePersonObject(22, 'Erika', 'erika@somemail.com');
-console.log(result);
-
 /**
  * ### Challenge `getName`
  * 
@@ -75,8 +72,6 @@ const person = {
   name: 'Erika',
   email: 'erika@someemail.com'
 };
-
-console.log(getName(person));
 
 
 
@@ -176,6 +171,8 @@ function getCarInfoByIndex(inventory, index) {
   return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
 }
 
+const dataInventory = 'JS-Exercise-Functions-Arrays-Objects/data/inventory.js';
+
 /**
  * ### Challenge `getLastCarInfo`
  * 
@@ -187,9 +184,14 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(carInventory) {
+  const carInfo = carInventory.find((item, index) => {
+    return index === carInventory.length - 1;
+  });
+  return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
 }
+
+//getLastCarInfo(dataInventory);
 
 /**
  * ### Challenge `getCarInfoById`
