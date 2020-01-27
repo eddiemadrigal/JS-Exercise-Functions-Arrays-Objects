@@ -118,7 +118,9 @@ function makeSmartPerson(name) {
 /*
 // ⭐️ Example Test Data ⭐️
 
-var inventory = [
+*/
+
+const inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
   { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
@@ -133,9 +135,7 @@ var inventory = [
   { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
-  /// ... Truncated
-]
-*/
+];
 /**
   * ### Example Array Challenge:
   * 
@@ -170,7 +170,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const carInfo = inventory.find((item, index) => {
+    return index === index;
+  });
+  return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
 }
 
 /**
