@@ -224,8 +224,19 @@ function getCarInfoById(inventory, carID) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  return inventory.sort();
+  inventory.sort(function(a, b) {
+    let car_modelA = a.car_model.toUpperCase();
+    let car_modelB = b.car_model.toUpperCase();
+    if (car_modelA < car_modelB) return -1;
+    
+    if (car_modelA > car_modelB) return 1;
+    
+    return 0;
+  });
+  return inventory;
 }
+
+console.log(sortCarInventory(inventory));
 
 /**
  * ### Challenge `getModelYears`
